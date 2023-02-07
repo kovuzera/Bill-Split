@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, textarea, button {
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --brand-green: #60A629;
+    --brand-green-hover: #8FCD5F;
+
+    --title: #292929;
+}
+
+h1, h2, h3, h4, .dark {
+    color: var(--title);
+}
+
+span {
+    color: var(--brand-green);
+}
+
+.wrapper {
+    width: 70%;
+    margin: 0 auto;
+}
+
+button {
+    cursor: pointer;
+}
