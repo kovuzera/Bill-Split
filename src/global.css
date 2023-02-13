@@ -1,33 +1,64 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body, textarea, button {
-    font-family: 'Poppins', sans-serif;
+body,
+textarea,
+button {
+  font-family: "Poppins", sans-serif;
 }
 
 :root {
-    --brand-green: #60A629;
-    --brand-green-hover: #8FCD5F;
+  --brand-green: #60a629;
+  --brand-green-hover: #79cc3a;
+  --modal-background: #F5F5F5;
 
-    --title: #292929;
+  --title: #292929;
 }
 
-h1, h2, h3, h4, .dark {
-    color: var(--title);
+h1,
+h2,
+h3,
+h4,
+.dark {
+  color: var(--title);
 }
 
 span {
-    color: var(--brand-green);
+  color: var(--brand-green);
 }
 
 .wrapper {
-    width: 70%;
-    margin: 0 auto;
+  width: 70%;
+  margin: 0 auto;
 }
 
 button {
-    cursor: pointer;
+  cursor: pointer;
+}
+
+.login-modal-overlay {
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-modal-content {
+  background-color: var(--modal-background);
+  width: 100%;
+  max-width: 686px;
+  padding: 1.5rem;
+  position: relative;
+  border-radius: 1.25rem;
+  display: flex;
+  justify-content: center;
 }

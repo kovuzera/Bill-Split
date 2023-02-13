@@ -1,9 +1,12 @@
-import Landing from "./Pages/Landing";
+import { Router } from "./components/Router";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
     <div className="App wrapper">
-      <Landing />
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
     </div>
   );
 }

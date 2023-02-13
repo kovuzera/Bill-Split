@@ -1,7 +1,6 @@
 .container {
     display: flex;
     flex-direction: column;
-    background-color: antiquewhite;
     height: 100vh;
     justify-content: space-between;
 }
@@ -12,7 +11,7 @@ p {
 }
 
 footer {
-    margin-bottom: 3rem;
+    padding-bottom: 5rem;
 }
 
 .welcome {
