@@ -10,9 +10,6 @@ export function Home() {
         <h2>Integrantes:</h2>
         <AvatarArea>
           <IntegrantAvatar />
-          <IntegrantAvatar />
-          <IntegrantAvatar />
-          <IntegrantAvatar />
         </AvatarArea>
       </Container>
     </>

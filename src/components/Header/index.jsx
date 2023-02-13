@@ -1,5 +1,5 @@
 import { AiOutlineUserAdd } from "react-icons/ai";
-import { MdPostAdd } from "react-icons/md";
+import { MdPostAdd, MdFileUpload } from "react-icons/md";
 import { BsCalendar3 } from "react-icons/bs";
 import { useState } from "react";
 import { Container, ModalStyle } from "./styles";
@@ -45,6 +45,14 @@ function Header() {
                 <GrClose size={20} />
               </button>
               <h2>Adicionar Integrante</h2>
+              <input type="text" placeholder="Nome do integrante"/>
+              <button className="send-photo">
+                <MdFileUpload size={20} />
+                Enviar foto
+              </button>
+              <button className="send">
+                Finalizar
+              </button>
             </ModalStyle>
           </Modal>
           <button className="header-btn green">

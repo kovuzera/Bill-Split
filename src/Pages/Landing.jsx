@@ -7,7 +7,7 @@ function Landing() {
       <LandingHeader />
       <div className="welcome">
         <p>
-          O <strong>bill $plit</strong> é o organizador financeiro oficial para
+          O <strong>bill<span>$</span>plit</strong> é o organizador financeiro oficial para
           você que mora com família ou amigos. <br />
           Dividir contas é comum e conosco essa parte da sua vida fica mais
           fácil!
