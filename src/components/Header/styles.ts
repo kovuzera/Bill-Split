@@ -42,3 +42,28 @@ export const Container = styled.header`
     }
   }
 `;
+
+export const ModalStyle = styled.form`
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  h2 {
+    font-size: 2rem;
+  }
+
+  .close-btn {
+    line-height: 0;
+    position: absolute;
+    right: 1.5rem;
+    background-color: transparent;
+    border: 0;
+
+    &:hover {
+      color: var(--brand-green)
+    }
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+`;
