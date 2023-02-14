@@ -21,7 +21,7 @@ export const Container = styled.header`
   }
 
   button {
-    padding: 0.8rem;
+    padding: .8rem;
     border-radius: 100%;
     border: none;
     transition: 0.2s;
@@ -40,6 +40,19 @@ export const Container = styled.header`
       background-color: var(--brand-green-hover);
     }
   }
+
+  .user {
+    background-color: transparent;
+    border: 1px solid transparent;
+    color: var(--title);
+
+    transition: 0.2s;
+
+    &:hover {
+      border: 1px solid var(--brand-green);
+      color: var(--brand-green);
+    }
+  }
 `;
 
 export const ModalStyle = styled.form`
@@ -50,6 +63,7 @@ export const ModalStyle = styled.form`
   h2 {
     font-size: 1.5rem;
     text-align: center;
+    margin-bottom: 2.5rem;
   }
 
   .close-btn {
@@ -65,15 +79,49 @@ export const ModalStyle = styled.form`
     }
   }
 
-  input {
+  .text-input + .text-input {
+    margin-top: 1rem;
+  }
+
+  .text-input {
     height: 2rem;
     border-radius: 10px;
     border: 1px solid lightgray;
     padding: 1rem;
-    margin-block: 3rem 2rem;
 
     &:focus {
       outline: 2px solid var(--brand-green);
+    }
+  }
+
+  h4 {
+    margin-bottom: 0.5rem;
+  }
+
+  .file-input {
+    display: none;
+  }
+
+  .file-label {
+    padding: 1rem 2rem;
+    width: fit-content;
+    background-color: transparent;
+    color: var(--brand-green);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 10px;
+    cursor: pointer;
+    border: 2px solid var(--brand-green);
+    border-radius: 10px;
+    align-self: center;
+    transition: 0.2s;
+    margin-block: 2rem 1rem;
+
+    &:hover {
+      color: white;
+      background-color: var(--brand-green);
+      border: 2px solid var(--brand-green);
     }
   }
 
@@ -102,11 +150,11 @@ export const ModalStyle = styled.form`
     }
   }
   .send {
-    margin-top: 2rem;
+    margin-top: 1rem;
 
     width: fit-content;
     align-self: center;
-    padding: .8rem 4rem;
+    padding: 0.8rem 4rem;
 
     display: flex;
     align-items: center;
@@ -125,5 +173,22 @@ export const ModalStyle = styled.form`
     &:hover {
       background-color: var(--brand-green-hover);
     }
+  }
+  p {
+    font-size: 0.8rem;
+    text-align: right;
+    margin-top: 0.5rem;
+  }
+
+  h3 {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .integrants {
+    width: fit-content;
+    align-self: center;
+    margin-top: 1rem;
   }
 `;

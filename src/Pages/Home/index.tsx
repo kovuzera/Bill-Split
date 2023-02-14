@@ -1,6 +1,6 @@
 import Header from "../../components/Header";
 import { IntegrantAvatar } from "../../components/IntegrantAvatar";
-import { AvatarArea, Container } from "./styles";
+import { AvatarArea, Container, SelectIntegrant } from "./styles";
 
 export function Home() {
   return (
@@ -11,6 +11,9 @@ export function Home() {
         <AvatarArea>
           <IntegrantAvatar />
         </AvatarArea>
+        <SelectIntegrant>
+          <p>Selecione um integrante.</p>
+        </SelectIntegrant>
       </Container>
     </>
   );

@@ -14,3 +14,12 @@ export const AvatarArea = styled.div`
   justify-content: center;
   gap: 1rem;
 `;
+
+export const SelectIntegrant = styled.div`
+  margin-top: 20%;
+
+  p {
+    color: var(--paragraph);
+    user-select: none;
+  }
+`;

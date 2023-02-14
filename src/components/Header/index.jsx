@@ -1,21 +1,42 @@
 import { AiOutlineUserAdd } from "react-icons/ai";
-import { MdPostAdd, MdFileUpload } from "react-icons/md";
+import { MdFileUpload, MdPostAdd } from "react-icons/md";
 import { BsCalendar3 } from "react-icons/bs";
+import { AiOutlineUser } from "react-icons/ai";
 import { useState } from "react";
 import { Container, ModalStyle } from "./styles";
 import { GrClose } from "react-icons/gr";
 
 import Modal from "react-modal";
+import { IntegrantAvatar } from "../IntegrantAvatar";
 
 function Header() {
-  const [isNewIntegrantModalOpen, netNewIntegrantModalOpen] = useState(false);
+  const [isNewIntegrantModalOpen, setNewIntegrantModalOpen] = useState(false);
+  const [isNewBillModalOpen, setNewBillModalOpen] = useState(false);
+  const [isLogoutConfirmationModalOpen, setLogoutConfirmationModalOpen] =
+    useState(false);
 
   function handleOpenNewIntegrantModal() {
-    netNewIntegrantModalOpen(true);
+    setNewIntegrantModalOpen(true);
   }
 
   function handleCloseNewIntegrantModal() {
-    netNewIntegrantModalOpen(false);
+    setNewIntegrantModalOpen(false);
+  }
+
+  function handleOpenNewBillModal() {
+    setNewBillModalOpen(true);
+  }
+
+  function handleCloseNewBillModal() {
+    setNewBillModalOpen(false);
+  }
+
+  function handleOpenLogoutConfirmationModal() {
+    setLogoutConfirmationModalOpen(true);
+  }
+
+  function handleCloseLogoutConfirmationModal() {
+    setLogoutConfirmationModalOpen(false);
   }
 
   return (
@@ -32,8 +53,8 @@ function Header() {
             <AiOutlineUserAdd size={24} />
           </button>
           <Modal
-            overlayClassName="login-modal-overlay"
-            className="login-modal-content"
+            overlayClassName="modal-overlay"
+            className="modal-content"
             isOpen={isNewIntegrantModalOpen}
             onRequestClose={handleCloseNewIntegrantModal}
           >
@@ -45,22 +66,59 @@ function Header() {
                 <GrClose size={20} />
               </button>
               <h2>Adicionar Integrante</h2>
-              <input type="text" placeholder="Nome do integrante"/>
-              <button className="send-photo">
-                <MdFileUpload size={20} />
+              <input
+                className="text-input"
+                type="text"
+                placeholder="Nome do integrante"
+              />
+              <label for="file" class="file-label">
+                <MdFileUpload size={24} />
                 Enviar foto
-              </button>
-              <button className="send">
-                Finalizar
-              </button>
+              </label>
+              <input
+                className="file-input"
+                type="file"
+                name="file"
+                id="file"
+                accept="image/*"
+              />
+              <button className="send">Finalizar</button>
             </ModalStyle>
           </Modal>
-          <button className="header-btn green">
+          <button onClick={handleOpenNewBillModal} className="header-btn green">
             <MdPostAdd size={24} />
           </button>
+          <Modal
+            overlayClassName="modal-overlay"
+            className="modal-content"
+            isOpen={isNewBillModalOpen}
+            onRequestClose={handleCloseNewBillModal}
+          >
+            <ModalStyle>
+              <button onClick={handleCloseNewBillModal} className="close-btn">
+                <GrClose size={20} />
+              </button>
+              <h2>Adicionar conta</h2>
+              <input
+                className="text-input"
+                type="text"
+                placeholder="Descrição"
+              />
+              <input className="text-input" type="text" placeholder="Valor" />
+              <p>Caso o valor seja parcelado, informe o valor da parcela.</p>
+              <h3>Quem ajudará a pagar?</h3>
+              <div className="integrants">
+                <IntegrantAvatar />
+              </div>
+              <button className="send">Finalizar</button>
+            </ModalStyle>
+          </Modal>
           <button className="header-btn">
             <BsCalendar3 color="gray" size={24} />
           </button>
+            <button className="header-btn user">
+              <AiOutlineUser size={24} />
+            </button>
         </div>
       </header>
     </Container>

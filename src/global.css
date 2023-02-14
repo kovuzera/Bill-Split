@@ -14,8 +14,10 @@ button {
   --brand-green: #60a629;
   --brand-green-hover: #79cc3a;
   --modal-background: #F5F5F5;
+  --default-red: rgb(255, 80, 80);
 
   --title: #292929;
+  --paragraph: #808080;
 }
 
 h1,
@@ -53,6 +55,30 @@ button {
 }
 
 .login-modal-content {
+  background-color: var(--modal-background);
+  width: 100%;
+  max-width: 386px;
+  padding: 1.5rem;
+  position: relative;
+  border-radius: 1.25rem;
+  display: flex;
+  justify-content: center;
+}
+
+.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
   background-color: var(--modal-background);
   width: 100%;
   max-width: 686px;
