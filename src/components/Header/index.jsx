@@ -53,10 +53,12 @@ function Header() {
             <AiOutlineUserAdd size={24} />
           </button>
           <Modal
+            closeTimeoutMS={100}
             overlayClassName="modal-overlay"
             className="modal-content"
             isOpen={isNewIntegrantModalOpen}
             onRequestClose={handleCloseNewIntegrantModal}
+            ariaHideApp={false}
           >
             <ModalStyle>
               <button
@@ -71,7 +73,7 @@ function Header() {
                 type="text"
                 placeholder="Nome do integrante"
               />
-              <label for="file" class="file-label">
+              <label htmlFor="file" className="file-label">
                 <MdFileUpload size={24} />
                 Enviar foto
               </label>
@@ -89,6 +91,7 @@ function Header() {
             <MdPostAdd size={24} />
           </button>
           <Modal
+            closeTimeoutMS={100}
             overlayClassName="modal-overlay"
             className="modal-content"
             isOpen={isNewBillModalOpen}
@@ -116,9 +119,9 @@ function Header() {
           <button className="header-btn">
             <BsCalendar3 color="gray" size={24} />
           </button>
-            <button className="header-btn user">
-              <AiOutlineUser size={24} />
-            </button>
+          <button className="header-btn user">
+            <AiOutlineUser size={24} />
+          </button>
         </div>
       </header>
     </Container>

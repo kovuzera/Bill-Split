@@ -16,9 +16,9 @@ export const Container = styled.header`
   button {
     position: absolute;
     right: 0;
-    padding: 0.7rem 2rem;
+    padding: 1rem;
     background-color: var(--brand-green);
-    border-radius: 10px;
+    border-radius: 100%;
     border: none;
     transition: 0.2s;
     color: white;

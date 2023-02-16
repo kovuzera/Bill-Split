@@ -1,5 +1,5 @@
-import { BiUser } from "react-icons/bi";
 import { GrClose } from "react-icons/gr";
+import { FiLogIn } from "react-icons/fi";
 import Modal from "react-modal";
 import { useState } from "react";
 import { Container, ModalContent, ModalStyle } from "./styles";
@@ -23,8 +23,7 @@ function LandingHeader() {
           bill<span>$</span>plit
         </h1>
         <button onClick={handleOpenLoginModal}>
-          <BiUser />
-          login
+          <FiLogIn size={24} />
         </button>
         <Modal
           overlayClassName="login-modal-overlay"
