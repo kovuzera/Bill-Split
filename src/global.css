@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+textarea,
+button {
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --brand-green: #60a629;
+  --brand-green-hover: #79cc3a;
+  --modal-background: #f5f5f5;
+  --default-red: rgb(255, 80, 80);
+
+  --title: #292929;
+  --paragraph: #808080;
+}
+
+h1,
+h2,
+h3,
+h4,
+.dark {
+  color: var(--title);
+}
+
+span {
+  color: var(--brand-green);
+}
+
+.wrapper {
+  width: 70%;
+  margin: 0 auto;
+}
+
+button {
+  cursor: pointer;
+}
+
+.login-modal-overlay {
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-modal-content {
+  background-color: var(--modal-background);
+  width: 100%;
+  max-width: 386px;
+  padding: 1.5rem;
+  position: relative;
+  border-radius: 1.25rem;
+  display: flex;
+  justify-content: center;
+}
+
+.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity .1s ease-in-out;
+}
+
+.ReactModal__Overlay--after-open{
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close{
+  opacity: 0;
+}
+.ReactModal__Content {
+  transform: translateY(-5rem);
+  transition: .1s ease-in-out;
+}
+
+.ReactModal__Content--after-open{
+  transform: translateY(0);
+}
+
+.ReactModal__Content--before-close{
+  transform: translateY(-5rem);
+}
+
+
+.modal-content {
+  background-color: var(--modal-background);
+  width: 100%;
+  max-width: 686px;
+  padding: 1.5rem;
+  position: relative;
+  border-radius: 1.25rem;
+  display: flex;
+  justify-content: center;
+}
