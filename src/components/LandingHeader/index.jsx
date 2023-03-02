@@ -45,9 +45,10 @@ function LandingHeader() {
               <Link className="login-btn-link" to={"/home"}>
                 <button className="login">Entrar</button>
               </Link>
-              <a className="create-account" href="#">
-                Criar conta
-              </a>
+
+              <Link className="create-account" to={"/createaccount"}>
+                  Criar conta
+              </Link>
             </ModalContent>
           </ModalStyle>
         </Modal>
